@@ -1,0 +1,14 @@
+[Unit]
+Description=Translate MQTT "events" from one format (JSON) to another between two brokers
+After=multi-user.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/usr/local/sbin
+ExecStart=/usr/bin/python3 /usr/local/sbin/eventTranslateJson.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
