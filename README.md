@@ -17,7 +17,7 @@ Any improvements or changes are welcome.
     systemctl enable eventTranslateJson.service
     systemctl start eventTranslateJson.service
 ```
-4. Run journalctl -xe to make sure it's running
+4. Run ***journalctl -xe*** to make sure it's running
 5. Edit /usr/local/sbin/eventTranslatejson.py and change *localBroker*, *remoteBroker*, *subscribeTopic*, and *hbtopic* to suit your needs.  *hbTopic* is what will be published to the remote.
 6. Restart the service to pick up the changes using
 ```
